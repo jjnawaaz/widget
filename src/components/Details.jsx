@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "./Button";
 import { ArrowLeft, X } from "lucide-react";
 import { detailsButtonData, detailsOptions } from "../utils/data";
+import XMark from "./XMark";
 
 const Details = () => {
   // will fetch data using this id
@@ -23,9 +24,7 @@ const Details = () => {
             </Link>
           </div>
           <div className="p-2">
-            <div className="border-[1px] border-gray-300 rounded-full p-1">
-              <X className="size-4" />
-            </div>
+            <XMark />
           </div>
         </div>
         {/* Refunds and Chargebacks  */}

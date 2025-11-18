@@ -2,6 +2,7 @@ import { CircleEllipsis, X } from "lucide-react";
 import Button from "./components/Button";
 import Card from "./components/Card";
 import { data } from "./utils/data";
+import XMark from "./components/XMark";
 
 function Home() {
   return (
@@ -9,9 +10,7 @@ function Home() {
       <div className="min-h-screen w-full">
         <div className="px-1 py-2 flex justify-between items-center">
           <div className="font-semibold">Add widget</div>
-          <div className="border-[1px] border-gray-300 rounded-full p-1">
-            <X className="size-3" />
-          </div>
+          <XMark />
         </div>
         {/* Filter */}
         <div className=" w-full overflow-hidden">
