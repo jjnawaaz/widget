@@ -30,3 +30,22 @@ export const data = [
     id: 4,
   },
 ];
+
+export const detailsOptions = [
+  "All",
+  "Online Payments",
+  "In-store Sales",
+  "Subscriptions",
+];
+
+export const detailsButtonData = [
+  {
+    heading: "Highlight high-risk transactions",
+    sub_heading:
+      "Mark transactions that are flagged as high risk in this widget.",
+  },
+  {
+    heading: "Show net revenue impact",
+    sub_heading: "Display how refunds and chargebacks affect your net sales.",
+  },
+];

@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Button from "./Button";
 import { ArrowLeft, X } from "lucide-react";
+import { detailsButtonData, detailsOptions } from "../utils/data";
 
 const Details = () => {
   // will fetch data using this id
   //   const { id } = useParams();
-  const [selected1, setSelected1] = useState(false);
-  const [selected2, setSelected2] = useState(false);
-  const [selected3, setSelected3] = useState(false);
-
+  const [selected, setSelected] = useState(0);
+  console.log(selected);
   return (
     <div className="bg-white min-h-screen">
       <div className="container w-full h-auto p-3 mx-auto">
@@ -44,36 +43,30 @@ const Details = () => {
           <div className="flex items-center justify-between text-[10px] gap-x-3 h-full">
             <div
               className={`${
-                selected1 ? "bg-white" : ""
+                selected === 1 ? "bg-white" : ""
               } w-full flex justify-center rounded-md px-2 h-full items-center transition-all duration-300`}
               onClick={() => {
-                setSelected1((prev) => !prev);
-                setSelected2(false);
-                setSelected3(false);
+                setSelected(1);
               }}
             >
               Data
             </div>
             <div
               className={`${
-                selected2 ? "bg-white" : ""
+                selected === 2 ? "bg-white" : ""
               } w-full flex justify-center rounded-md px-2 h-full items-center transition-all duration-300`}
               onClick={() => {
-                setSelected2((prev) => !prev);
-                setSelected1(false);
-                setSelected3(false);
+                setSelected(2);
               }}
             >
               Style
             </div>
             <div
               className={`${
-                selected3 ? "bg-white" : ""
+                selected === 3 ? "bg-white" : ""
               } w-full flex justify-center rounded-md px-2 h-full items-center transition-all duration-300`}
               onClick={() => {
-                setSelected3((prev) => !prev);
-                setSelected1(false);
-                setSelected2(false);
+                setSelected(3);
               }}
             >
               Settings
@@ -82,7 +75,7 @@ const Details = () => {
         </div>
         {/* Details Hero Component  */}
         <div className="mt-3 rounded-lg overflow-hidden">
-          <div className="p-3 bg-yellow-200 flex flex-col gap-3">
+          <div className="p-5 sm:p-12 bg-gray-200 flex flex-col gap-3">
             <h1 className="text-center text-[10px]">Preview</h1>
             <div className="bg-white rounded-md flex justify-between overflow-hidden">
               <div className="w-1/3">
@@ -111,10 +104,11 @@ const Details = () => {
                   </div>
                 </div>
               </div>
-              <div className=" flex-1">
+              <div className="flex-1 relative md:min-h-64">
                 <img
                   src="https://www.mathworks.com/help/examples/graphics/win64/PiechartSimpleExample_01.png"
                   alt=""
+                  className="absolute inset-0 object-contain h-full w-full"
                 />
               </div>
             </div>
@@ -123,14 +117,14 @@ const Details = () => {
         {/* Details Section */}
         <div className="p-1">
           <div className="text-sm font-medium">Business unit / channel</div>
-          <div className="flex gap-3 text-md justify-between pr-10 mt-2">
-            {[0, 1, 2, 3].map((item) => (
+          <div className="flex gap-3 text-md justify-between mt-2 w-full">
+            {detailsOptions.map((item, idx) => (
               <>
                 <div
-                  className="bg-white px-3 py-2 rounded-full shadow-md shadow-gray-400"
-                  key={item}
+                  className="bg-white px-3 py-2 rounded-full shadow-md shadow-gray-400 text-[9px] "
+                  key={idx}
                 >
-                  Text
+                  {item}
                 </div>
               </>
             ))}
@@ -138,17 +132,15 @@ const Details = () => {
         </div>
         {/* Cards  */}
         <div>
-          {[0, 1].map((item) => (
+          {detailsButtonData.map((item) => (
             <>
               <div
                 className=" h-20 w-full mt-3 border-t-[1px] border-gray-400"
                 key={item}
               >
-                <h1 className="font-medium text-sm mt-2">
-                  Highlight high-risk transactions
-                </h1>
+                <h1 className="font-medium text-sm mt-2">{item.heading}</h1>
                 <h1 className="text-xs text-gray-600 font-medium">
-                  Mark transactions that are flagged as high risk in this widget
+                  {item.sub_heading}
                 </h1>
               </div>
             </>
