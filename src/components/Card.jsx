@@ -19,8 +19,8 @@ const Card = ({ data }) => {
         <div className="w-2/3 flex flex-col gap-y-3 text-[10px]">
           <h4>{data.type}</h4>
           <div className="flex flex-col gap-y-1">
-            <h1 className="sm:text-sm">{data.title}</h1>
-            <p>{data.content}</p>
+            <h1 className="sm:text-sm md:text-lg">{data.title}</h1>
+            <p className="md:text-xs">{data.content}</p>
           </div>
           <div className="flex justify-between">
             <button className="bg-white px-1 py-1 border-2 border-gray-300 rounded-md">

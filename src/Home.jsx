@@ -14,16 +14,18 @@ function Home() {
         </div>
         {/* Filter */}
         <div className=" w-full overflow-hidden">
-          <div className="flex items-center justify-between p-2">
+          <div className="flex items-center container justify-between p-2 sm:mx-auto">
             {data.map((item) => (
               <div
-                className="text-[7px] bg-gray-100 rounded-sm px-3 py-2 sm:px-2 sm:py-2"
+                className="text-[7px] sm:text-xs  bg-gray-100 rounded-sm px-3 py-2 sm:px-2 sm:py-2"
                 key={item}
               >
                 {item.type}
               </div>
             ))}
-            <div className="text-[7px] bg-gray-100 rounded-lg p-2">+3</div>
+            <div className="text-[7px] sm:text-xs bg-gray-100 rounded-lg p-2">
+              +3
+            </div>
           </div>
         </div>
         {/* Cards */}
