@@ -17,7 +17,7 @@ function Home() {
           <div className="flex items-center container justify-between p-2 sm:mx-auto">
             {data.map((item) => (
               <div
-                className="text-[7px] sm:text-xs  bg-gray-100 rounded-sm px-3 py-2 sm:px-2 sm:py-2 cursor-pointer"
+                className="text-[7px] sm:text-xs  bg-gray-100 rounded-sm md:rounded-md px-3 py-2 sm:px-4 sm:py-2 cursor-pointer"
                 key={item}
               >
                 {item.type}
