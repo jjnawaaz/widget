@@ -17,13 +17,13 @@ function Home() {
           <div className="flex items-center container justify-between p-2 sm:mx-auto">
             {data.map((item) => (
               <div
-                className="text-[7px] sm:text-xs  bg-gray-100 rounded-sm px-3 py-2 sm:px-2 sm:py-2"
+                className="text-[7px] sm:text-xs  bg-gray-100 rounded-sm px-3 py-2 sm:px-2 sm:py-2 cursor-pointer"
                 key={item}
               >
                 {item.type}
               </div>
             ))}
-            <div className="text-[7px] sm:text-xs bg-gray-100 rounded-lg p-2">
+            <div className="text-[7px] sm:text-xs bg-gray-100 rounded-lg p-2 cursor-pointer">
               +3
             </div>
           </div>

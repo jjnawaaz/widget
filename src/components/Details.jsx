@@ -45,7 +45,7 @@ const Details = () => {
             <div
               className={`${
                 selected === 1 ? "bg-white" : ""
-              } w-full flex justify-center rounded-md px-2 h-full items-center transition-all duration-300`}
+              } w-full flex justify-center rounded-md px-2 h-full items-center transition-all duration-300 cursor-pointer`}
               onClick={() => {
                 setSelected(1);
               }}
@@ -55,7 +55,7 @@ const Details = () => {
             <div
               className={`${
                 selected === 2 ? "bg-white" : ""
-              } w-full flex justify-center rounded-md px-2 h-full items-center transition-all duration-300`}
+              } w-full flex justify-center rounded-md px-2 h-full items-center transition-all duration-300 cursor-pointer`}
               onClick={() => {
                 setSelected(2);
               }}
@@ -65,7 +65,7 @@ const Details = () => {
             <div
               className={`${
                 selected === 3 ? "bg-white" : ""
-              } w-full flex justify-center rounded-md px-2 h-full items-center transition-all duration-300`}
+              } w-full flex justify-center rounded-md px-2 h-full items-center transition-all duration-300 cursor-pointer`}
               onClick={() => {
                 setSelected(3);
               }}
@@ -126,7 +126,7 @@ const Details = () => {
             {detailsOptions.map((item, idx) => (
               <>
                 <div
-                  className="bg-white px-3 py-2 rounded-full shadow-md shadow-gray-400 text-[9px] sm:text-xs "
+                  className="bg-white px-3 py-2 rounded-full shadow-md shadow-gray-400 text-[9px] sm:text-xs cursor-pointer "
                   key={idx}
                 >
                   {item}
