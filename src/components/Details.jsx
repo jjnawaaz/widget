@@ -81,27 +81,31 @@ const Details = () => {
             <div className="bg-white rounded-md flex justify-between overflow-hidden">
               <div className="w-1/3">
                 <div className="flex flex-col justify-center items-center h-full bg-green-20 p-2 gap-3">
-                  <div className="bg-slate-100 h-1/2 w-full text-xs flex gap-1 p-1  sm:gap-3">
+                  <div className="bg-slate-100 h-1/2 w-full text-xs flex gap-1 p-1 sm:gap-3">
                     <div className="text-[5px] sm:text-xs bg-red-400 h-2 w-2 mt-1"></div>
-                    <div className="flex flex-col items-start">
-                      <h1 className="text-[7px] sm:text-xs">Refunds</h1>
-                      <h1>$3600</h1>
+                    <div className="flex-1 flex-col items-start ">
+                      <h1 className="text-[7px] sm:text-xs lg:text-base">
+                        Refunds
+                      </h1>
+                      <h1 className="lg:text-sm">$3600</h1>
                       <div className="flex gap-1 items-center">
-                        <div className="text-[4px] sm:text-xs bg-red-400 h-2 w-2"></div>
-                        <div className="text-[5px] sm:text-xs">
+                        <div className="text-[4px] sm:text-xs lg:text-sm bg-red-400 h-2 w-2"></div>
+                        <div className="text-[5px] sm:text-xs lg:text-sm">
                           High risk $500
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="bg-slate-100 h-1/2 w-full text-xs flex gap-1 p-1 sm:gap-3">
+                  <div className="bg-slate-100 h-1/2 w-full text-xs flex gap-1 p-1 sm:gap-3 ">
                     <div className="text-[5px] sm:text-xs bg-red-400 h-2 w-2 mt-1"></div>
-                    <div className="flex flex-col items-start">
-                      <h1 className="text-[7px] sm:text-xs">Refunds</h1>
-                      <h1>$3600</h1>
+                    <div className="flex-1 flex-col items-start ">
+                      <h1 className="text-[7px] sm:text-xs lg:text-base">
+                        Refunds
+                      </h1>
+                      <h1 className="lg:text-sm">$3600</h1>
                       <div className="flex gap-1 items-center">
-                        <div className="text-[4px] sm:text-xs bg-red-400 h-2 w-2"></div>
-                        <div className="text-[5px] sm:text-xs">
+                        <div className="text-[4px] sm:text-xs lg:text-sm bg-red-400 h-2 w-2"></div>
+                        <div className="text-[5px] sm:text-xs lg:text-sm">
                           High risk $500
                         </div>
                       </div>
